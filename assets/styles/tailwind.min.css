@@ -5156,7 +5156,6 @@ select {
     .lg\:flex {
         display: flex;
         justify-content: center;
-        align-items: baseline;
     }
 
     .lg\:grid {
