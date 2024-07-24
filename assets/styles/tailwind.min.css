@@ -4741,11 +4741,12 @@ select {
     }
 
     .md\:py-\[53px\] {
-        padding-bottom: 53px;
+        padding-bottom: 75px;
         padding-top: 53px
     }
 
     .md\:px-\[48px\] {
+        width: 100%;
         padding-left: 48px;
         padding-right: 48px
     }
