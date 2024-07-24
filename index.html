@@ -33,10 +33,12 @@
         <div class="flex justify-end">
           <button class="text-white close-video text-[20px]" type="button" title="Close (Esc)">x</button>
         </div>
-        <!-- <iframe class="aspect-video w-full" src="assets/images/wizzz/whizz-global.mp4" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe> -->
+        <div class="aspect-video w-full">
+          <video width="100%" height="auto" controls>
+              <source src="assets/images/wizzz/whizz-global.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+      </div>
       </div>
     </div>
     <div class="overlay"></div>
@@ -893,7 +895,7 @@
         
       </div>
     </div> -->
-    <div class="px-[12px] md:px-[36px] mt-[70px] xl:px-0">
+    <!-- <div class="px-[12px] md:px-[36px] mt-[70px] xl:px-0">
       <div class="items-center justify-between mb-[70px] md:mb-[90px] md:flex">
         <div>
           <h2
@@ -971,7 +973,7 @@
           </div>
         </a>
       </div>
-    </div>
+    </div> -->
     <!-- <div class="full-width bg-green-900 relative"><img class="absolute right-0 opacity-30 top-[-150px]"
         src="./assets/images/icons/pattern-2.svg" alt=""><img class="absolute opacity-30 bottom-[-90px] left-[-15px]"
         src="./assets/images/icons/pattern-1.svg" alt="">
@@ -1280,6 +1282,7 @@
       </div>
     </footer>
   </div>
+  <script type="text/javascript" src="assets/scripts/vendors/webflow.js"></script>
   <script type="text/javascript" src="assets/scripts/vendors/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="assets/scripts/vendors/slick.min.js"></script>
   <script src="assets/scripts/app.js"></script>
