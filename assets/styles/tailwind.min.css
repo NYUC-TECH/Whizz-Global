@@ -3103,8 +3103,8 @@ select {
 }
 
 .px-\[12px\] {
-    padding-left: 12px;
-    padding-right: 12px
+    padding-left: 50px;
+    padding-right: 50px
 }
 
 .py-\[70px\] {
@@ -4777,8 +4777,8 @@ select {
     }
 
     .md\:px-\[63px\] {
-        padding-left: 63px;
-        padding-right: 63px
+        padding-left: 30px;
+        padding-right: 30px
     }
 
     .md\:py-\[55px\] {
@@ -5904,3 +5904,49 @@ select {
             font-weight: 600;
             line-height: 58px;
           }
+
+          .gallery-img{
+            height: auto;
+            width: 100%;
+          }
+
+/* Custom CSS to ensure grid layout for gallery */
+.grid {
+    display: grid;
+    gap: 1.5rem; /* Adjust the gap between grid items as needed */
+  }
+  
+  @media (min-width: 768px) {
+    .grid-cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .grid-cols-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* Ensure images are the same size */
+  .gallery-img {
+    width: 100%;
+    height: 200px; /* Adjust the height as needed */
+    object-fit: cover;
+    border-radius: 12px; /* Adjust border radius as needed */
+  }
+  
+  /* Remove any sliding/carousel effects if present */
+  .offer-list.dots {
+    display: block;
+  }
+  
+  .offer-list.dots .slick-track {
+    display: flex;
+    gap: 1.5rem; /* Adjust the gap between items */
+  }
+  
+  .offer-list.dots .slick-slide {
+    float: none;
+    display: inline-block;
+  }
