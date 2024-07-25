@@ -558,3 +558,21 @@ input:checked~.dot {
 }
 
 /*# sourceMappingURL=app.min.css.map */
+
+/* css by Nitish  */
+
+.bannerpink
+{
+    background-color: #A0378C;
+}
+.bannertext{
+    color: #A2CD46;
+}
+.home-link {
+    color: initial; /* Ensure no hover text color initially */
+}
+
+.home-link:hover {
+    color: #A0378C; /* Change hover text color to #A0378C */
+}
+
