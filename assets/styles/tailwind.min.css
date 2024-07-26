@@ -5914,6 +5914,7 @@ select {
 .grid {
     display: grid;
     gap: 1.5rem; /* Adjust the gap between grid items as needed */
+    align-items: center;
   }
   
   @media (min-width: 768px) {
@@ -5949,4 +5950,56 @@ select {
   .offer-list.dots .slick-slide {
     float: none;
     display: inline-block;
+  }
+
+  
+/* Ensure the parent container has overflow hidden */
+.brands-flex-wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Define the keyframes for sliding to the left */
+  @keyframes slide-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Define the keyframes for sliding to the right */
+  @keyframes slide-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(50%);
+    }
+  }
+  
+  /* Apply the sliding animation to the top logos */
+  .images-brand-infinite-move {
+    display: flex;
+    animation: slide-left 20s linear infinite;
+    width: 200%; /* Ensure the container is twice as wide to accommodate both sets of images */
+  }
+  
+  /* Apply the sliding animation to the bottom logos */
+  .images-brand-infinite-move.opposite {
+    display: flex;
+    animation: slide-right 20s linear infinite;
+    width: 200%; /* Ensure the container is twice as wide to accommodate both sets of images */
+  }
+  
+  /* Styling the brand image wrapper */
+  .brands-image-wrapper {
+    flex: 0 0 auto; /* Prevent images from shrinking */
+    padding: 0 10px;
+  }
+  
+  /* Styling for images to ensure they are inline */
+  .brands-image-wrapper img {
+    display: block;
   }
