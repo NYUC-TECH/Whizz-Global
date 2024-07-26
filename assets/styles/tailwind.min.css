@@ -6332,5 +6332,142 @@ select {
     min-height: 112px;
   }
 
+  .center-heading{
+    color: black;
+    margin-left: 10px;
+    font-size: 50px;
+    font-weight: 600;
+  }
 
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  /* gallery */
+
+.wrapper {
+    padding-right: 15px;
+  padding-left: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 1300px;
+    margin: 20px;
+  }
+  
+  .gallery-item {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: transform 0.3s ease; 
+    transform-origin: center center; 
+  }
+  
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .popup-content {
+    padding-top: 70px;
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 1200px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .wrapper{
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .wrapper{
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .wrapper{
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+  }
+  
+  .product_info{
+    padding: 20px;
+  }
+  
+  .img-fluid{
+    border-radius: 30px;
+  }
+  
+  
