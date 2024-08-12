@@ -3,12 +3,22 @@ html {
 }
 
 .full-width {
+    position: relative;
     left: 50%;
+    right: 50%;
+    width: 100vw;
     margin-left: -50vw;
     margin-right: -50vw;
-    position: relative;
-    right: 50%;
-    width: 100vw
+}
+
+@media (max-width: 768px) {
+    .full-width {
+        left: 0;
+        right: 0;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
 }
 
 .col-12 {
