@@ -33,52 +33,41 @@
       
       <header class="header">
         <div class="header-container">
-          <a class="logo-container" href="/">
-            <img class="logo" src="assets/images/wizzz/logo-black.png" alt="logo image">
-          </a>
-          <nav class="nav">
-            <ul class="navbar">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li class="dropdown">
-                <a href="#">Services</a>
-                <ul class="dropdown-menu">
-                  <li><a href="events.html">Events</a></li>
-                  <li><a href="Digital-services.html">Digital Services</a></li>
-                  <li><a href="event-gifting.html">Event Gifting</a></li>
-                  <li><a href="employee-engagement.html">Employee Engagement</a></li>
+            <a class="logo-container" href="/">
+                <img class="logo" src="assets/images/wizzz/logo-black.png" alt="logo image">
+            </a>
+            <nav class="nav">
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="Digital-services.html">Digital Services</a></li>
+                            <li><a href="event-gifting.html">Event Gifting</a></li>
+                            <li><a href="employee-engagement.html">Employee Engagement</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
-              </li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-          </nav>
-          <button class="mobile-menu-toggle">Menu</button> <!-- Button to toggle the mobile menu -->
+            </nav>
+            <button class="mobile-menu-toggle">Menu</button>
         </div>
-      </header>
+    </header>
+    
 
       <script>
-// Toggle the mobile menu
 document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
-  document.querySelector('.navbar').classList.toggle('active');
+    document.querySelector('.navbar').classList.toggle('active');
 });
 
-// Toggle the dropdown menu
-document.querySelectorAll('.dropdown > a').forEach(function(dropdownToggle) {
-  dropdownToggle.addEventListener('click', function(e) {
-    e.preventDefault(); // Prevent the default link behavior
-    dropdownToggle.parentElement.classList.toggle('active'); // Toggle the 'active' class on the parent
-  });
-});
-
-// Close dropdown if clicking outside
-document.addEventListener('click', function(event) {
-  const dropdowns = document.querySelectorAll('.dropdown');
-  dropdowns.forEach(function(dropdown) {
-    if (!dropdown.contains(event.target) && dropdown.classList.contains('active')) {
-      dropdown.classList.remove('active');
-    }
-  });
+document.querySelector('.dropdown > a').addEventListener('click', function(e) {
+    e.preventDefault();
+    const dropdown = this.parentElement;
+    dropdown.classList.toggle('active');
+    dropdown.querySelector('.dropdown-menu').classList.toggle('active');
 });
 
       </script>
