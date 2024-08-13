@@ -5750,7 +5750,7 @@ select {
 .section {
     width: 100%;
   }
-
+  
   .w-layout-blockcontainer {
     max-width: 940px;
     margin-left: auto;
@@ -5763,13 +5763,13 @@ select {
       max-width: 728px;
     }
   }
-
+  
   @media screen and (max-width: 767px) {
     .w-layout-blockcontainer {
       max-width: none;
     }
   }
-
+  
   .container {
     width: 100%;
     max-width: 1440px;
@@ -5777,27 +5777,23 @@ select {
     margin-right: auto;
     overflow: hidden;
   }
-
+  
   .container {
     display: flex;
     flex-direction: column;
     min-height: 200px;
   }
-
+  
   .brands-flex-wrapper {
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
-    opacity: .6;
-    justify-content: flex-end;
-    align-items: flex-start;
-    width: 100%;
-    display: flex;
-    position: relative;
     overflow: hidden;
+    position: relative;
+    display: flex;
   }
   
   .images-brand-infinite-move {
     display: flex;
+    animation: slide-left 40s linear infinite;
+    width: calc(100% * 2); /* Double the width to accommodate the duplicated logos */
   }
   
   .images-brand-infinite-move.opposite {
@@ -5960,7 +5956,7 @@ select {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-50%); /* Move the logos halfway through the container */
     }
   }
   
@@ -5969,20 +5965,20 @@ select {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(50%);
+      transform: translateX(50%); /* Slides half of the container's width */
     }
   }
   
   .images-brand-infinite-move {
     display: flex;
     animation: slide-left 20s linear infinite;
-    width: 200%;
+    width: calc(100% * 2); /* Makes the container double the size */
   }
   
   .images-brand-infinite-move.opposite {
     display: flex;
     animation: slide-right 20s linear infinite;
-    width: 200%;
+    width: calc(100% * 2); /* Makes the container double the size */
   }
   
   .brands-image-wrapper {
@@ -5992,6 +5988,10 @@ select {
 
   .brands-image-wrapper img {
     display: block;
+  }
+
+  .image-brands-grid {
+    display: flex;
   }
 
   /* services */
