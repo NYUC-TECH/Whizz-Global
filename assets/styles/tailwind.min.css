@@ -5796,9 +5796,7 @@ select {
     width: calc(100% * 2); /* Double the width to accommodate the duplicated logos */
   }
   
-  .images-brand-infinite-move.opposite {
-    margin-right: -600px;
-  }
+  
 
   .image-brands-grid {
     grid-column-gap: 64px;
@@ -5824,9 +5822,7 @@ select {
     min-height: 8px;
   }
 
-  .images-brand-infinite-move.opposite {
-    margin-right: -600px;
-  }
+  
 
   .caps.font-black.move-down {
     position: absolute;
@@ -5962,24 +5958,21 @@ select {
   
   @keyframes slide-right {
     0% {
-      transform: translateX(0);
+      transform: translateX(-50%); /* Start the animation halfway through */
     }
     100% {
-      transform: translateX(50%); /* Slides half of the container's width */
+      transform: translateX(0); /* Move the logos back to the starting point */
     }
   }
   
-  .images-brand-infinite-move {
-    display: flex;
-    animation: slide-left 20s linear infinite;
-    width: calc(100% * 2); /* Makes the container double the size */
+  
+
+  .images-brand-infinite-move.opposite {
+    animation: slide-right 40s linear infinite; /* Change the animation to slide-right */
+    width: calc(100% * 2); /* Double the width to accommodate the duplicated logos */
   }
   
-  .images-brand-infinite-move.opposite {
-    display: flex;
-    animation: slide-right 20s linear infinite;
-    width: calc(100% * 2); /* Makes the container double the size */
-  }
+  
   
   .brands-image-wrapper {
     flex: 0 0 auto;
