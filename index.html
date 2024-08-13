@@ -218,7 +218,7 @@ document.querySelector('.dropdown > a').addEventListener('click', function(e) {
         <!-- <p class="text-gray-600 font-bold bg-gray-100 rounded-full border-transparent transition-all duration-200 cursor-pointer tab-item font-chivo text-sm px-5 py-[10px] text-[14px] leading-[18px] lg:text-[18px] lg:leading-[22px] lg:px-[32px] lg:py-[22px] hover:bg-transparent hover:text-green-900 border-[2px] hover:border-green-900 hover:translate-y-[-2px] active"
           id="branding">MICE</p> -->
         <p class="text-gray-600 font-bold bg-gray-100 rounded-full border-transparent transition-all duration-200 cursor-pointer tab-item font-chivo text-sm px-5 py-[10px] text-[14px] leading-[18px] lg:text-[18px] lg:leading-[22px] lg:px-[32px] lg:py-[22px] hover:bg-transparent hover:text-green-900 border-[2px] hover:border-green-900 hover:translate-y-[-2px]"
-          id="development">Events</p>
+          id="Events">Events</p>
         <p class="text-gray-600 font-bold bg-gray-100 rounded-full border-transparent transition-all duration-200 cursor-pointer tab-item font-chivo text-sm px-5 py-[10px] text-[14px] leading-[18px] lg:text-[18px] lg:leading-[22px] lg:px-[32px] lg:py-[22px] hover:bg-transparent hover:text-green-900 border-[2px] hover:border-green-900 hover:translate-y-[-2px]"
           id="animation">Digital services</p>
         <p class="text-gray-600 font-bold bg-gray-100 rounded-full border-transparent transition-all duration-200 cursor-pointer tab-item font-chivo text-sm px-5 py-[10px] text-[14px] leading-[18px] lg:text-[18px] lg:leading-[22px] lg:px-[32px] lg:py-[22px] hover:bg-transparent hover:text-green-900 border-[2px] hover:border-green-900 hover:translate-y-[-2px]"
@@ -229,7 +229,7 @@ document.querySelector('.dropdown > a').addEventListener('click', function(e) {
       </div>
     
    
-      <div class="tab-content lg:gap-[30px] lg:flex development">
+      <div class="tab-content lg:gap-[30px] lg:flex Events">
         <div class="p-5 md:p-[60px] lg:w-1/2" style="background-color: #A2CD46;">
           <h2 class="font-bold font-chivo text-[28px] leading-[32px] md:text-heading-2 mb-[30px] text-white" >Events
           </h2>
@@ -895,6 +895,30 @@ document.querySelector('.dropdown > a').addEventListener('click', function(e) {
   <script type="text/javascript" src="assets/scripts/vendors/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="assets/scripts/vendors/slick.min.js"></script>
   <script src="assets/scripts/app.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const tabs = document.querySelectorAll(".tab-item");
+      const contents = document.querySelectorAll(".tab-content");
+  
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", function() {
+          const targetClass = tab.id;
+  
+          // Hide all contents
+          contents.forEach((content) => {
+            content.classList.add("!hidden");
+          });
+  
+          // Show the selected content
+          const targetContent = document.querySelector(`.${targetClass}`);
+          if (targetContent) {
+            targetContent.classList.remove("!hidden");
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
